@@ -1,0 +1,95 @@
+/* src/index.css */
+
+/* Add this to enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- 1. Global Reset & Variables --- */
+:root {
+  /* Define colors based on the image's dark theme */
+  --primary-color: #00ccff; /* Light purple/Active color */
+  --secondary-color: #00ccff; /* Blob/Indicator color */
+  --sidebar-bg-color: #231F3B; /* Darker sidebar background */
+  --text-color-light: #f0f0f0;
+  --text-color-faded: #8F8AA6;
+  --bg-color-main: #202020; /* Deep space dark background */
+  --bg-color-light: #f4f4f4; /* Light content background (for contrast) */
+}
+
+/* A basic reset to ensure cross-browser consistency */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- 2. Site-Wide Functionality --- */
+
+/* **CRITICAL:** Enables smooth scrolling when clicking anchor links (#home, #about) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set up the overall look of the body */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--bg-color-main);
+  color: var(--text-color-light);
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 20px 0px 20px 0px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* --- 3. Main Layout Structure --- */
+
+/* The container that holds the fixed nav and the scrollable content */
+.main-layout-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* The area where all your sections live (it fills the screen) */
+.portfolio-content {
+  flex-grow: 1;
+  max-width: 80%;
+  
+  /* Add padding to the left if the nav bar is taking up space, 
+     or just let it overlap the margin as it's fixed/outside the flow. 
+     You will need to adjust this when adding a header or full width content. */
+}
+
+.section-full-height {
+  min-height: 100vh; /*Makes each section take up the whole viewport */
+  padding: 40px 40px;
+}
+
+.modal-open {
+    /* 1. Prevents the main page from scrolling */
+    overflow-y: hidden;
+    
+    /* 2. Compensates for the scrollbar removal by adding margin/padding 
+       equal to the scrollbar width (typically 16px) to prevent content shift. */
+    padding-right: 16px;
+}

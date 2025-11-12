@@ -1,0 +1,25 @@
+.projectCard {
+    background-color: #232323;
+    border-radius: 20px;
+    padding: 20px;box-shadow: 0 0 20px black;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px) scale(1.01);
+}
+
+.cardImage {
+    border-radius: 10px;
+    width: 100%;
+    height: 225px;
+
+    object-fit: cover;
+    object-position: left;
+}
+
+.cardTitle {
+    color: var(--primary-color);
+    text-shadow: 0 0 20px var(--primary-color);
+}

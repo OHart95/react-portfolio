@@ -1,0 +1,132 @@
+/* ------------------------------------------------------------------------------------------ */
+/* Layout styles */
+/* ------------------------------------------------------------------------------------------ */
+
+.HeroSection {
+    min-height: 100vh;
+    padding: 60px 40px;
+    display: grid;
+    
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto 1fr 1fr;
+    gap: 40px;
+
+    /* --- Define areas by name --- */
+    grid-template-areas: 
+    "left-content right-content" /* Top row: 60/40 split */
+    "skills-grid skills-grid"
+    "portfolio-desc portfolio-desc";
+}
+
+.leftColumn {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.rightColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillsGrid {
+  display: flex;
+  flex-direction: row;
+  height: 175px;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--primary-color);
+
+  grid-area: skills-grid; /*Spans the entire bottom row */
+}
+
+.portfolioDesc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color-faded);
+
+    grid-area: portfolio-desc;
+    height: 25px;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* Font styles */
+/* ------------------------------------------------------------------------------------------ */
+
+.HeroTitleH1 {
+    color: white;
+}
+
+.HeroTitleH3 {
+  padding: 0px;
+}
+
+.fullStop {
+    color: var(--primary-color);
+    font-size: 2rem;
+    text-shadow: 0 0 20px var(--primary-color);
+}
+
+.altTextColour {
+  color: var(--primary-color);
+  text-shadow: 0 0 20px var(--primary-color)
+}
+
+.personalImage {
+    height: 100%;
+    width: 60%;
+    filter: drop-shadow(0 4px 12px var(--primary-color));
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* Fade in animation */
+/* ------------------------------------------------------------------------------------------ */
+
+/* 1. Define the Fade-In Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        /* Slide up slightly from below for a cleaner look */
+        transform: translateY(10px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. Base Class: Apply the animation but keep it hidden initially */
+.textFade {
+    opacity: 0; /* Keep the element hidden before the animation starts */
+    animation-name: fadeIn;
+    animation-duration: 0.8s; /* How long the animation takes */
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; /* IMPORTANT: Keeps the final 100% state */
+}
+
+/* 3. Staggering Classes: Use 'animation-delay' for staggering */
+
+/* Hello. */
+.fadeDelay1 {
+    animation-delay: 0.2s; 
+}
+
+/* I'm Oliver */
+.fadeDelay2 {
+    animation-delay: 0.5s; /* Starts 0.3s after the first */
+}
+
+/* Low code developer... */
+.fadeDelay3 {
+    animation-delay: 0.8s; /* Starts 0.3s after the second */
+}
+
+/* View my work button */
+.fadeDelay4 {
+    animation-delay: 1.2s; /* Give it a noticeable delay */
+}

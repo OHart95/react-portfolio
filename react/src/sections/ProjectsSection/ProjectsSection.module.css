@@ -1,0 +1,20 @@
+/* ------------------------------------------------------------------------- */
+/* Layout styles */
+/* ------------------------------------------------------------------------- */
+
+.projectsGrid {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Space between cards */
+    width: 100%;
+    justify-content: center;
+}
+
+.stylingH2 {
+    margin-bottom: 20px;
+}
+
+.stylingP {
+    margin-top: 20px;
+}

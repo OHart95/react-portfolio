@@ -1,0 +1,34 @@
+/* src/components/TechBubble.module.css */
+
+.bubbleContainer {
+  /* Dimensions for the container */
+  width: 80px;
+  height: 80px;
+  
+  /* CRITICAL: Makes the container a perfect circle */
+  border-radius: 50%; 
+  
+  /* CRITICAL: Centers the image horizontally and vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Style */
+  box-shadow: 0 0 16px var(--primary-color); /* Optional: A slight glow effect */
+
+  transition: transform 0.1s ease-in-out;
+}
+
+.bubbleContainer:hover {
+  transform: translateY(-10px) scale(1.1);
+}
+
+.logoImage {
+  /* Ensure the image doesn't overflow the container */
+  max-width: 60%;
+  max-height: 60%;
+  
+  /* If your logo images are colored, use this filter to change them 
+     to your Neon Aqua color for a unified look (Optional) */
+  /* filter: drop-shadow(0 0 2px var(--color-accent-secondary)); */
+}
