@@ -9,6 +9,8 @@ import timeTravelerImage from '@/assets/timeTraveler.png';
 import timeTravelerVideo from '@/assets/TimeTraveler.mp4';
 import emissionsTrackerImage from '@/assets/emissionsTracker.png';
 import FSMIMage from '@/assets/FSM.svg';
+import formBuilderVideo from '@/assets/formBuilder.mp4';
+import formBuilderImage from '@/assets/formBuilder.png';
 
 import styles from './ProjectsSection.module.css';
 
@@ -68,6 +70,24 @@ const projectsData = [
         {category: 'Database Logic Decoupling', body: 'Successfully engineered an architecture where the PowerApp acted as a passive conduit, with all transaction handling and business rule enforcement pushed down to the secure, scalable database layer.'},
         {category: 'Performance and Security', body: 'Improved performance by allowing the database engine to execute complex T-SQL logic efficiently, and enhanced security by preventing end-users from directly manipulating complex business rules via the low-code interface.'},
         {category: 'Thin-Client Development', body: 'Gained experience in designing front-end flows optimized for interacting solely with database stored procedures, focusing on streamlined input/output rather than complex in-app data manipulation.'}
+    ]
+},
+
+{
+    id: 'form-builder-poc',
+    title: 'Dynamic Form Builder POC',
+    summary: 'A proof-of-concept application demonstrating a serverless, dynamic form builder using React, Vite, and Firestore for schema and submission handling.',
+    videoPath: formBuilderVideo,
+    image: formBuilderImage,
+
+    techStack: ['React', 'Vite', 'Firestore'],
+    fullDesc: 'The Dynamic Form Builder is a full-stack proof-of-concept allowing users to visually define form schemas (fields, types, labels, validation). These schemas are stored in Firestore, and the application dynamically renders the corresponding forms. All submitted data is then saved back to a separate collection in Firestore, demonstrating end-to-end data flow using a serverless architecture. This fills a gap in the organisation for an external data collection tool that could be branded professionally and handles more complex forms and validation for higher quality data (Microsoft Forms im looking at you).',
+    keyLearning: [
+        {category: 'Firestore Integration & Modeling', body: 'Successfully implemented Firestore as a core serverless database to manage two distinct data models: static form definitions (schemas) and dynamic user submissions.'},
+        {category: 'Dynamic Component Rendering', body: 'Developed a robust system in React to parse JSON form schemas retrieved from the database and translate them into corresponding UI components (e.g., text inputs, dropdowns) at runtime.'},
+        {category: 'Secure Data Handling', body: 'Gained hands-on experience setting up Firestore Security Rules to govern read/write access, ensuring that form definitions are public while submission data is securely tied to authenticated users (via anonymous sign-in).'},
+        {category: 'State Management Complexity', body: 'Managed complex state flow for dynamic form inputs, ensuring user input correctly maps back to its schema definition before being stored in the database.'},
+        {category: 'Full-Stack Serverless Architecture', body: 'Achieved a complete full-stack, serverless application using only React, Vite, and Google Firestore, demonstrating proficiency in modern development paradigms.'}
     ]
 }
 ];

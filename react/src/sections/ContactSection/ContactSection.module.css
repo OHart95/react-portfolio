@@ -42,6 +42,23 @@
     margin-bottom: 30px;
 }
 
+@media (max-width: 1000px) {
+  .contactSectionImage {
+    display: none;
+  }
+
+  .contactSection {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .contactContainer {
+    width: 100%;
+  }
+}
+
+
 /* ------------------------------------------------------------------------- */
 /* Form Styles */
 /* ------------------------------------------------------------------------- */

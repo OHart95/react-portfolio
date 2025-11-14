@@ -34,25 +34,43 @@
 
 .skillsGrid {
   display: flex;
-  flex-direction: row;
-  height: 175px;
-  gap: 40px;
+  flex-wrap: wrap;       /* <-- THIS is the missing piece */
   justify-content: center;
   align-items: center;
+  gap: 40px;
+  padding-top: 40px;
+
+  height: auto;          /* remove fixed height */
   border-top: 1px solid var(--primary-color);
 
-  grid-area: skills-grid; /*Spans the entire bottom row */
+  grid-area: skills-grid;
 }
 
 .portfolioDesc {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content:center;
+    align-items: start;
     color: var(--text-color-faded);
 
     grid-area: portfolio-desc;
-    height: 25px;
+    height: auto;
 }
+
+@media (max-width: 1000px) {
+  .rightColumn {
+    display: none;
+  }
+
+  .HeroSection {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "left-content"
+      "skills-grid"
+      "portfolio-desc";
+    text-align: center;
+  }
+}
+
 
 /* ------------------------------------------------------------------------------------------ */
 /* Font styles */

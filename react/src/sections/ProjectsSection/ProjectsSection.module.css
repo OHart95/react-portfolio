@@ -3,12 +3,23 @@
 /* ------------------------------------------------------------------------- */
 
 .projectsGrid {
-    padding-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px; /* Space between cards */
-    width: 100%;
-    justify-content: center;
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  gap: 30px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .projectsGrid {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
+  }
 }
 
 .stylingH2 {
